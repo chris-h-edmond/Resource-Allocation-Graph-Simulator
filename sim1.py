@@ -6,9 +6,8 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.lines import Line2D
 
 class ResourceAllocationGraph:
+    
     def __init__(self, root):
-        x= 5 
-
         self.graph = nx.DiGraph()
         self.root = root
         self.root.title("Resource Allocation Graph Simulator")
