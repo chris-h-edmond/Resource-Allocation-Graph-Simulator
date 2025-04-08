@@ -1,0 +1,75 @@
+Test Set 1 (No Deadlock)
+Processes: P1, P2
+
+Resources: R1, R2
+
+Request Edges (P→R): P1 → R1, P2 → R2
+
+Allocation Edges (R→P): R1 → P1, R2 → P2
+
+Expected Outcome: No Deadlock
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+Test Set 2 (Deadlock Case)
+Processes: P1, P2
+
+Resources: R1, R2
+
+Request Edges (P→R): P1 → R1, P2 → R2
+
+Allocation Edges (R→P): R1 → P2, R2 → P1
+
+Expected Outcome: Deadlock Detected (Cycle: P1 → R1 → P2 → R2 → P1)
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+Test Set 3 (Single Process Holding Multiple Resources)
+Processes: P1
+
+Resources: R1, R2
+
+Request Edges (P→R): P1 → R1
+
+Allocation Edges (R→P): R1 → P1, R2 → P1
+
+Expected Outcome: No Deadlock (Single process can release resources)
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+Test Set 4 (Complex Deadlock Case)
+Processes: P1, P2, P3
+
+Resources: R1, R2, R3
+
+Request Edges (P→R): P1 → R1, P2 → R2, P3 → R3
+
+Allocation Edges (R→P): R1 → P2, R2 → P3, R3 → P1
+
+Expected Outcome: Deadlock Detected (Cycle: P1 → R1 → P2 → R2 → P3 → R3 → P1)
+---------------------------------------------------------------------------------------------------------
+
+
+
+Test Set 5 (Process Without Deadlock)
+Processes: P1, P2, P3
+
+Resources: R1, R2, R3
+
+Request Edges (P→R): P1 → R1, P2 → R2
+
+Allocation Edges (R→P): R1 → P2, R2 → P3
+
+Expected Outcome: No Deadlock (No Cyclic Dependency)
